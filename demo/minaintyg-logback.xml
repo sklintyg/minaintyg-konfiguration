@@ -15,7 +15,7 @@
   <jmxConfigurator />
 
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <filter class="se.inera.certificate.logging.MarkerFilter">
+    <filter class="se.inera.intyg.common.util.logging.MarkerFilter">
       <markers>Monitoring</markers>
       <onMatch>DENY</onMatch>
       <onMismatch>ACCEPT</onMismatch>
@@ -28,7 +28,7 @@
 
   <!--Daily rolling file appender -->
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <filter class="se.inera.certificate.logging.MarkerFilter">
+    <filter class="se.inera.intyg.common.util.logging.MarkerFilter">
       <markers>Monitoring</markers>
         <onMatch>DENY</onMatch>
       <onMismatch>ACCEPT</onMismatch>
@@ -46,7 +46,7 @@
 
   <!--Daily rolling file appender for logging monitoring events -->
   <appender name="MONITORING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <filter class="se.inera.certificate.logging.MarkerFilter">
+    <filter class="se.inera.intyg.common.util.logging.MarkerFilter">
       <marker>Monitoring</marker>
       <onMatch>ACCEPT</onMatch>
       <onMismatch>DENY</onMismatch>
@@ -57,7 +57,7 @@
       </fileNamePattern>
     </rollingPolicy>
     <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
-      <layout class="se.inera.certificate.logging.PatternLayoutWithSessionContext">
+      <layout class="se.inera.intyg.minaintyg.web.logging.PatternLayoutWithSessionContext">
         <param name="Pattern" value="%date{ISO8601} %session - %msg%n"/>
       </layout>
     </encoder>
@@ -71,16 +71,8 @@
 
   <logger name="org.apache.cxf" level="error" />
 
-  <logger name="se.inera.certificate.web" level="WARN" />
-
-  <logger name="se.inera.certificate.modules.fk7263" level="info" />
-
-  <logger name="se.inera.certificate.modules.ts_bas" level="info" />
-
-  <logger name="se.inera.certificate.modules.ts_diabetes" level="info" />
-
-  <!-- Monitoring logger -->
-  <logger name="se.inera.certificate.web.service.MonitoringLogService" level="INFO" />
+  <logger name="se.inera.intyg.minaintyg.web" level="WARN" />
+  <logger name="se.inera.intyg.minaintyg.web.web.service.MonitoringLogService" level="INFO" />
 
   <root level="WARN">
     <appender-ref ref="STDOUT" />
