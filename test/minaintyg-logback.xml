@@ -69,7 +69,7 @@
   <logger name="org.springframework.web" level="WARN" />
   <logger name="org.springframework.http" level="WARN" />
 
-  <logger name="org.apache.cxf" level="info" />
+  <logger name="org.apache.cxf" level="error" />
 
   <logger name="se.inera.intyg.minaintyg.web" level="WARN" />
   <logger name="se.inera.intyg.minaintyg.web.web.service.MonitoringLogService" level="INFO" />
