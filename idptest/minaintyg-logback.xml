@@ -63,11 +63,18 @@
     </encoder>
   </appender>
 
+  log4j.logger.org.springframework.security.saml=DEBUG
+  log4j.logger.org.opensaml=DEBUG
+  log4j.logger.PROTOCOL_MESSAGE=DEBUG
+
   <logger name="org.springframework" level="WARN" />
   <logger name="org.springframework.security" level="WARN" />
   <logger name="org.springframework.core.env.PropertySourcesPropertyResolver" level="WARN" />
   <logger name="org.springframework.web" level="WARN" />
-  <logger name="org.springframework.http" level="WARN" />
+  <logger name="org.springframework.http" level="DEBUG" />
+  <logger name="org.opensaml" level="DEBUG" />
+
+  <logger name="org.springframework.security.saml" level="DEBUG" />
 
   <logger name="org.apache.cxf" level="error" />
 
