@@ -72,7 +72,7 @@
   <logger name="org.apache.cxf" level="error" />
 
   <logger name="se.inera.intyg.minaintyg.web" level="WARN" />
-  <logger name="se.inera.intyg.minaintyg.web.web.service.MonitoringLogService" level="INFO" />
+  <logger name="se.inera.intyg.minaintyg.web.service.MonitoringLogService" level="INFO" />
 
   <root level="WARN">
     <appender-ref ref="STDOUT" />
